@@ -4,11 +4,13 @@
 	"description": "Graph Component Library in React w/ Canvas",
 	"main": "index.js",
 	"scripts": {
-		"build": "rollup -c rollup.config.babel.js",
-		"watch": "rollup -c rollup.config.babel.js -w",
+		"lib:build": "rollup -c rollup.config.babel.js",
+		"lib:watch": "rollup -c rollup.config.babel.js -w",
 		"examples:build": "cd \"./examples\" && \"./node_modules/.bin/webpack\"",
 		"examples:watch": "cd \"./examples\" && \"./node_modules/.bin/webpack-dev-server\"",
-		"start": "(npm run watch & npm run examples:watch)",
+		"build": "npm run lib:build && npm run examples:build",
+		"watch": "(npm run lib:watch & npm run examples:watch)",
+		"start": "npm run build && npm run watch",
 		"test": "jest --no-cache"
 	},
 	"repository": {
