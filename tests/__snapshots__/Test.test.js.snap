@@ -1,36 +1,17 @@
-exports[`PopupTable 1`] = `
-<div
-  className="PopupMenu_PopupMenu__8TfA4"
->
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test 1`] = `
+<div>
   <div
-    className="PopupMenu_button__20m_Y"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-  />
-  <div
-    className="PopupMenu_popover__3hd_Z"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
     style={
       Object {
-        "height": "auto",
-        "left": "calc(-100px + 50%)",
-        "visibility": "hidden",
-        "width": "calc(200px - 10px)",
+        "padding": "3px 7px",
       }
     }
   >
-    <div
-      style={
-        Object {
-          "padding": "3px 7px",
-        }
-      }
-    >
-      <span>
-        Test
-      </span>
-    </div>
+    <span>
+      Test
+    </span>
   </div>
 </div>
 `;

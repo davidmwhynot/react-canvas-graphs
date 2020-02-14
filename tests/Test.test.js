@@ -1,8 +1,8 @@
 import React from 'react';
-import { Test } from '../build/rrpm.module';
+import { Test } from '../build/index.module';
 import renderer from 'react-test-renderer';
 
-test('PopupTable', () => {
+test('Test', () => {
 	const component = renderer.create(
 		<div>
 			<Test>Test</Test>

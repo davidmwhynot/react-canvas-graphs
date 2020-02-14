@@ -11,7 +11,12 @@
 		"build": "npm run lib:build && npm run examples:build",
 		"watch": "(npm run lib:watch & npm run examples:watch)",
 		"start": "npm run build && npm run watch",
+		"setup": "npm i && cd examples && npm i",
 		"test": "jest --no-cache"
+	},
+	"jest": {
+		"testURL": "http://localhost:5000/",
+		"testRegex": "tests/.*\\.(js|jsx)$"
 	},
 	"repository": {
 		"type": "git",
