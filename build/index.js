@@ -6,6 +6,36 @@
 
 var React__default = 'default' in React ? React['default'] : React;
 
+function styleInject(css, ref) {
+  if ( ref === void 0 ) ref = {};
+  var insertAt = ref.insertAt;
+
+  if (!css || typeof document === 'undefined') { return; }
+
+  var head = document.head || document.getElementsByTagName('head')[0];
+  var style = document.createElement('style');
+  style.type = 'text/css';
+
+  if (insertAt === 'top') {
+    if (head.firstChild) {
+      head.insertBefore(style, head.firstChild);
+    } else {
+      head.appendChild(style);
+    }
+  } else {
+    head.appendChild(style);
+  }
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+var css = "@import url(\"https://fonts.googleapis.com/css?family=Oxygen\");\nspan {\n  color: #fff;\n  font-size: 3rem;\n  font-family: 'Oxygen'; }\n";
+styleInject(css);
+
 var classCallCheck = function (instance, Constructor) {
   if (!(instance instanceof Constructor)) {
     throw new TypeError("Cannot call a class as a function");
@@ -54,7 +84,7 @@ var possibleConstructorReturn = function (self, call) {
   return call && (typeof call === "object" || typeof call === "function") ? call : self;
 };
 
-var Test = function (_Component) {
+var Test$1 = function (_Component) {
 	inherits(Test, _Component);
 
 	function Test() {
@@ -79,7 +109,7 @@ var Test = function (_Component) {
 	return Test;
 }(React.Component);
 
-exports.Test = Test;
+exports.Test = Test$1;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
